@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<!-- Fichier de textes EN -->
+<strings lan="en">
+	<!-- Section : Header -->
+	<group name="header">
+		<string name="title_home">Susan St-Laurent</string>
+		<string name="meta_desc_home">Portfolio of Montreal Artist Susan St-Laurent</string>
+		<string name="title_trad">Susan St-Laurent - Portfolio : Traditional Paintings</string>
+		<string name="meta_desc_trad">Adapt description to the traditional portfolio page</string>
+		<string name="title_digital">Susan St-Laurent : Portfolio : Digital Paintings</string>
+		<string name="meta_desc_digital">Adapt description to the digital portfolio page</string>
+		
+		<string name="menu_home">Home</string>
+		<string name="menu_trad">Portfolio : traditional</string>
+		<string name="menu_digital">Portfolio : digital</string>
+		<string name="menu_cv">Artist CV</string>
+		<string name="contact">Contact</string>
+	</group>
+	<group name="home">
+		<string name="intro1">
+			[Google Automatic Translation - Replace Before Release] I experienced a variety of techniques to fill my need to create pottery, stained glass, screen printing, batik, encaustic, Japanese papers, creative process, color theory, digital photography, computer graphics, multimedia, film, etc.
+		</string>
+		<string name="intro2">
+			[Google Automatic Translation - Replace Before Release] My commitment to abstract painting was consolidated when I attended the Workshop gesture in Montreal in 2007. It taught me to appreciate a work there, even if it is only in fine detail.
+		</string>
+	</group>
+
+	<!-- Section : Portfolio (commun) -->
+	<group name="pf">
+		<string name="imagecountlabel">Image</string>
+		<string name="inforequestbtnlabel">Info Request</string>
+		<string name="previewbtnlabel">Preview This Work</string>
+		<string name="previousbtnlabel">Previous</string>
+		<string name="nextbtnlabel">Next</string>
+		<string name="paintingimgalt">Work</string>
+	</group>
+	
+	<!-- Section : Portfolio - Traditionnel -->
+	<group name="trad">
+		<string name="title">Portfolio - Traditional Paintings</string>
+		<string name="intro">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Obcaecati, autem, animi cupiditate consectetur suscipit iure soluta rerum eos. Enim, molestiae, dignissimos, iusto, odit veniam ea rerum esse nesciunt quae magnam quod reiciendis deserunt excepturi quasi.</string>
+	</group>
+	<!-- Section : Portfolio - Numérique -->
+	<group name="digital">
+		<string name="title">Portfolio - Digital Paintings</string>
+		<string name="intro">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non, sint, quod, voluptates, nostrum minus labore id pariatur consequuntur iste dignissimos reiciendis minima rerum quaerat explicabo unde tempora voluptatum odit accusantium et incidunt asperiores earum molestias dicta corporis dolores fugiat ipsum a sequi at nihil sit.</string>
+	</group>
+	<!-- Section : Dossier d'artistes -->
+	<group name="cv">
+		<string name="intro">Artist CV page coming soon.</string>
+	</group>
+	<!-- Section : Footer -->
+	<group name="footer">
+		<string name="droits">All Rights Reserved.</string>
+	</group>
+</strings>

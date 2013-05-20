@@ -1,0 +1,46 @@
+[
+	{
+		"img":"rotator1.jpg",
+		"link":"http://google.com",
+		"texts": {
+			"fr":{
+				"label":"Titre de cette <b>diapo</b>",
+				"sublabel":"Du 13 juin au 12 juillet 2013",
+				"alt":"Feuilles d'automne"
+			},
+			"en":{
+				"label":"Slide title",
+				"sublabel":"June 12 to July 13, 2013",
+				"alt":"Automn Leaves"
+			}
+		}
+	},
+	{
+		"img":"rotator2.jpg",
+		"link":"http://yahoo.com",
+		"texts": {
+			"fr":{
+				"label":"Deuxième diapo",
+				"sublabel":"Texte en sous-titre ici",
+				"alt":"deux"
+			},
+			"en":{
+				"label":"Second slide",
+				"sublabel":"Sub label text here",
+				"alt":"two"
+			}
+		}
+	},
+	{
+		"img":"rotator3.jpg",
+		"link":"http://msn.com",
+		"texts": {
+			"fr":{
+				"alt":"Texte alternatif de l'image"
+			},
+			"en":{
+				"alt":"Alternate image text"
+			}
+		}
+	}
+]

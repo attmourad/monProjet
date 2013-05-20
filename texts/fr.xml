@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<!-- Fichier de textes FR -->
+<strings lan="fr">
+	<!-- Section : Header -->
+	<group name="header">
+		<string name="title_home">Susan St-Laurent</string>
+		<string name="meta_desc_home">Portfolio de l'artiste montréalaise Susan St-Laurent</string>
+		<string name="title_trad">Susan St-Laurent - Portfolio : peinture traditionnelle</string>
+		<string name="meta_desc_trad">Adapter la description à la page du portfolio traditionnel</string>
+		<string name="title_digital">Susan St-Laurent : Portfolio : peinture numérique</string>
+		<string name="meta_desc_digital">Adapter la description à la page du portfolio numérique</string>
+		
+		<string name="menu_home">Accueil</string>
+		<string name="menu_trad">Portfolio : traditionnel</string>
+		<string name="menu_digital">Portfolio : numérique</string>
+		<string name="menu_cv">Dossier d'artiste</string>
+		<string name="contact">Contact</string>
+	</group>
+	<group name="home">
+		<string name="intro1">
+			J’ai expérimenté une variété de techniques pour combler mon besoin de créer : poterie, vitrail, sérigraphie, batik, encaustique, papiers japonais, processus de créativité, théorie de la couleur, photographie numérique, infographie, multimédia, production cinématographique, etc.
+		</string>
+		<string name="intro2">
+			Mon engagement dans la peinture abstraite s’est consolidé lorsque j’ai fréquenté l’Atelier du geste, à Montréal, en 2007. On m’y a enseigné à apprécier une œuvre, même si ce n’est que dans un fin détail.
+		</string>
+	</group>
+
+	<!-- Section : Portfolio (commun) -->
+	<group name="pf">
+		<string name="imagecountlabel">Image</string>
+		<string name="inforequestbtnlabel">Demande d'info</string>
+		<string name="previewbtnlabel">Prévisualiser cette &amp;oelig;uvre</string>
+		<string name="previousbtnlabel">Image précédente</string>
+		<string name="nextbtnlabel">Image suivante</string>
+		<string name="paintingimgalt">&amp;OElig;uvre</string>
+	</group>
+	
+	<!-- Section : Portfolio - Traditionnel -->
+	<group name="trad">
+		<string name="title">Portfolio - Peinture traditionnelle</string>
+		<string name="intro">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Obcaecati, autem, animi cupiditate consectetur suscipit iure soluta rerum eos. Enim, molestiae, dignissimos, iusto, odit veniam ea rerum esse nesciunt quae magnam quod reiciendis deserunt excepturi quasi.</string>
+	</group>
+	<!-- Section : Portfolio - Numérique -->
+	<group name="digital">
+		<string name="title">Portfolio - Peinture numérique</string>
+		<string name="intro">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non, sint, quod, voluptates, nostrum minus labore id pariatur consequuntur iste dignissimos reiciendis minima rerum quaerat explicabo unde tempora voluptatum odit accusantium et incidunt asperiores earum molestias dicta corporis dolores fugiat ipsum a sequi at nihil sit.</string>
+	</group>
+	<!-- Section : Dossier d'artistes -->
+	<group name="cv">
+		<string name="intro">Dossier d'artiste en construction.</string>
+	</group>
+	<!-- Section : Footer -->
+	<group name="footer">
+		<string name="droits">Tous droits réservés.</string>
+	</group>
+</strings>

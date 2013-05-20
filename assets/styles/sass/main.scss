@@ -1,0 +1,413 @@
+// Variables
+$ff_roboto: 'Roboto', sans-serif;
+
+// Couleurs des textes
+$nav_color: #bababa;
+$nav_activecolor: #bfb35f;
+$logocolor: #bfab92;
+$maincolor:#666; 
+
+// Couleurs de fonds
+$navbg: #333333;
+$nav_activebg: #000;
+$logobg: #f0ece7;
+$containerbg: #fff;
+$imageviewerbgcolor: #dedede;
+
+// Couleurs de bordures et d'ombres
+$containerboxbordercolor:#b4b4b4; 
+$thumbactivebordercolor: #FEC607;
+
+// Mixins
+
+@mixin boxShadow($color,$size,$inset:"") {
+	-webkit-box-shadow: #{$inset} 0px 0px $size 2px $color;
+	-moz-box-shadow: #{$inset} 0px 0px $size 2px $color;
+	box-shadow: #{$inset} 0px 0px $size 2px $color;
+}
+
+@mixin opacity($value:0.5) {
+  opacity: $value;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=#{$value * 100})";
+  filter: alpha(opacity= $value * 100 );
+  zoom: 1;
+}
+
+@mixin ruler($width:1px,$type:dashed,$color:$containerboxbordercolor) {
+	border-bottom:$width $type $color;
+}
+
+@mixin linearGradient($col1,$stop1,$col2,$stop2,$col3,$stop3) {
+	background-color: $col1;
+	background: -moz-linear-gradient(bottom, $col1 $stop1, $col2 $stop2, $col3 $stop3);
+	background: -webkit-linear-gradient(bottom, $col1 $stop1, $col2 $stop2, $col3 $stop3); 
+	background: -o-linear-gradient(bottom, $col1 $stop1, $col2 $stop2, $col3 $stop3); 
+	background: -ms-linear-gradient(bottom, $col1 $stop1, $col2 $stop2, $col3 $stop3); 
+	background: linear-gradient(to top, $col1 $stop1, $col2 $stop2, $col3 $stop3); 
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$col1', endColorstr='$col3',GradientType=0 );
+}
+
+
+* { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
+
+html {
+	background: url(../../images/fixedpagebg.jpg) no-repeat center center fixed;
+	background-size:cover;
+	
+	&:after {
+		content:"";
+		position:fixed;
+		width:100%;
+		height:100%;
+		top:0;
+		left:0;
+		background: url(../../images/tiledpagebg.jpg) 0 0; 
+		@include opacity(0.8);
+		z-index:-1;
+	}
+
+	&.lt-ie9 {
+		background: url(../../images/tiledpagebg.jpg);
+		&:after {
+			content:none;
+			background: none; 
+		}
+	}
+}
+
+a,a:link,a:hover {
+	text-decoration:none;
+	color:inherit;
+}
+
+#container {
+	width:960px;
+	margin:0 auto;
+	border:$containerboxbordercolor solid 1px;
+	@include boxShadow($containerboxbordercolor,10px);
+	background-color: $containerbg;
+	font-family:$ff_roboto;
+	font-size: 16px;
+	font-weight:400;
+	color: $maincolor;
+
+	.left {
+		float: left;
+	}
+
+	.right {
+		float: right;
+	}
+
+	.flexbutton {
+		cursor: pointer;
+		position:relative;
+		z-index: 1;
+		border:1px solid $containerboxbordercolor;
+		padding:7px 15px;
+		font-weight: 400;
+		font-size: 16px;
+		&:before {
+			content: "";
+			position: absolute;
+			z-index: -1;
+			top:1px;
+			bottom:1px;
+			right:1px;
+			left:1px;
+			border: 2px solid $containerbg;
+		}
+		@include linearGradient(#cecece,25%,#dfdfdf,75%,#eee,100%);
+		&:hover {
+			@include linearGradient(#dfdfdf,40%,#efefef,75%,#fff,100%);
+		}
+	}
+
+	nav.primary {
+		background-color:$navbg !important;
+		height: 40px;
+		color: $nav_color;
+		clear: both;
+		
+		ul {
+			margin: 0;
+			padding: 0px 35px;
+			li {
+				display: inline-block;
+				position:relative;
+				list-style: none;
+				font-size: 14px;
+				font-weight: 500;
+				padding: 0px;
+				.lt-ie9 & {
+					padding:0 3px;
+				} 
+				margin-right: -5px;
+				&:last-child {
+					margin-right: 0px;
+				}
+				&.active {
+					background-color: $nav_activebg;
+					color: $nav_activecolor;
+					&:after {
+						content:" ";
+						border:10px solid transparent;
+						border-top:10px solid $nav_activebg;
+						position:absolute;
+						top:100%;
+						left:50%;
+						margin-left: -10px;
+						z-index: 1;
+					}
+				}
+				a {
+					display: inline-block;
+					padding: 10px 15px;
+					span[class*="icon-"] {
+						padding-right: 5px;
+					}
+					&:hover {
+						background-color: $nav_activebg;
+						color: $nav_activecolor;
+					} 
+				}
+				&.group {
+					a {
+						padding:10px 5px;
+					}
+				}
+			}
+		}
+	}
+
+	header h1 {
+		background-color: $logobg;
+		background: -moz-linear-gradient(top, $logobg 0%, $logobg 50%, #e3ddd5 100%);
+		background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,$logobg), color-stop(50%,$logobg), color-stop(100%,#e3ddd5));
+		background: -webkit-linear-gradient(top, $logobg 0%,$logobg 50%,#e3ddd5 100%); 
+		background: -o-linear-gradient(top, $logobg 0%,$logobg 50%,#e3ddd5 100%); 
+		background: -ms-linear-gradient(top, $logobg 0%,$logobg 50%,#e3ddd5 100%); 
+		background: linear-gradient(to bottom, $logobg 0%,$logobg 50%,#e3ddd5 100%); 
+		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#{$logobg}', endColorstr='#e3ddd5',GradientType=0 ); 
+		color:#000;
+		font-size: 38px;
+		font-weight: 300;
+		margin-top:0;
+		height: 80px;
+		text-align: center;
+		padding-top:17px;
+		span {
+			color:$logocolor;
+		}
+	}
+
+	footer {
+		margin: 15px 50px;
+		padding: 20px 0px 10px 0px;
+		font-size: 14px;
+		text-align: right;
+		border-top:1px solid #e1e1e1;
+	}
+
+	div.main_home {
+		padding: 15px 50px;
+		font-size: 16px;
+		.slideshow {
+			.slidesmask {
+				width:860px;
+				height:362px;
+				overflow: hidden;
+				.slides {
+					width:10000px;
+					margin-left: -860px;
+					article {
+						position:relative;
+						width:860px;
+						height:362px;
+						float:left;
+						.label {
+							position:absolute;
+							width:100%;
+							height: 70px;
+							top:250px;
+							color:white;
+							font-size: 22px;
+							font-weight: 400;
+							z-index: 10;
+							padding:8px 15px;
+							&:before {
+								content:" ";
+								position:absolute;
+								background-color: #000;
+								width:100%;
+								height: 70px;
+								padding-right:2px;
+								top:0px;
+								left:0px;
+								@include opacity(0.3);
+								z-index: -1;
+
+								.lt-ie9 & {
+									background-color: #777;
+								}
+							}
+							.sublabel {
+								font-size: 16px;
+								padding-top:2px; 
+							}
+						}
+					}
+				}
+			}
+			.control {
+				text-align: center;
+				padding:10px;
+				border-bottom:1px dashed #e1e1e1;
+				span {
+					font-size: 14px;
+				}
+			}
+		}
+	}
+
+	// Code SASS pour TP #1
+	
+	div.main_pf {
+		padding: 15px 50px;
+		h2 {
+			font-size: 24px;
+			font-weight: 500;
+			margin:0;
+			padding-bottom:5px;
+			@include ruler(1px, solid, $containerboxbordercolor);
+		}
+		.category {
+			h3 {
+				margin:0;
+				padding:0;
+				margin-top:30px;
+				margin-bottom: 10px;
+				padding-bottom:5px;
+				font-weight: 500;
+				font-size: 20px;
+				@include ruler();
+			}
+			.workdisplay {
+				display: none;
+				&.active {
+					display: block;
+				}
+				.info {
+					margin-bottom: 10px;
+					clear:both;
+					overflow: hidden;
+					h4 {
+						margin:0;
+						padding:0;
+						font-size: 20px;
+						font-weight: 400;
+					}
+					p {
+						margin:0;
+						padding:0;
+					}
+					.flexbutton {
+						margin-top: 10px;
+						margin-left: 10px;
+					}
+				}
+
+				.imageviewer {
+					width:1000px;
+					clear:both;
+					margin-left: -70px;
+					.imageframe {
+						position:relative;
+						float:left;
+						width:860px;
+						height:480px;
+						background-color:$imageviewerbgcolor;
+						border:$containerboxbordercolor solid 1px;
+						@include boxShadow($containerboxbordercolor,10px,inset);
+
+						img {
+							position:absolute;
+							max-height: 440px;
+							max-width: 820px;
+							margin:auto;
+							top:0;
+							bottom:0;
+							left:0;
+							right:0;
+						}
+					}
+					.previous,.next {
+						width:70px;
+						height:480px;
+						position:relative;
+						a {
+							position:absolute;
+							width:57px;
+							height:147px;
+							margin:auto;
+							top:0;
+							bottom:0;
+							left:0;
+							right:0;
+						}
+					}
+					.previous a {
+						background: url(../../images/slider_lefttab_off.png) no-repeat;
+						&:hover {
+							background-image: url(../../images/slider_lefttab_on.png);
+						}
+					}
+					.next a {
+						background: url(../../images/slider_righttab_off.png) no-repeat;
+						top:12px; // Juste pour régler temporairement un défaut dans l'image (redécouper dans PS et se débarasser de cette déclaration)
+						&:hover {
+							background-image: url(../../images/slider_righttab_on.png);
+						}
+					}
+						
+				}
+				.caption {
+					clear:both;
+					text-align: center;
+					padding:10px;
+					@include ruler();
+				}
+			}
+			ul.thumbs {
+				margin:0;
+				padding:0;
+				width:880px;
+				li {
+					display:inline-block;
+					list-style: none;
+					padding:10px 22px 10px 0;
+					img {
+						width:100px;
+						height: 100px;
+						cursor: pointer;
+						&:hover {
+							@include opacity(0.75);
+						}
+					}
+					
+					&.active {
+						img {
+							border:5px solid $thumbactivebordercolor;
+							@include boxShadow($containerboxbordercolor,5px);
+							&:hover {
+								@include opacity(1);
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+
+	
+}

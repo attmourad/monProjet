@@ -1,0 +1,19 @@
+<!-- Home page slideshow data -->
+<slides>
+	<slide img="rotator1.jpg" link="http://google.com">
+		<text id="label" lang="fr" alt="Feuilles d'automne">Titre de la nouvelle ou de l'oeuvre</text>
+		<text id="label" lang="en" alt="Autumn Leaves">Title of news item or showcased work</text>
+		<text id="sublabel" lang="fr">Du 11 au 21 juin 2013</text>
+		<text id="sublabel" lang="en">June 11 to 21, 2013</text>
+	</slide>
+	<slide img="rotator2.jpg" link="http://www.yahoo.ca">
+		<text id="label" lang="fr" alt="Prochaine exposition">Un autre titre ...</text>
+		<text id="label" lang="en" alt="Next Exhibition">Another title ...</text>
+		<text id="sublabel" lang="fr">Dernière semaine</text>
+		<text id="sublabel" lang="en">Last Week</text>
+	</slide>
+	<slide img="rotator3.jpg" link="">
+		<text id="label" lang="fr" alt="Une autre oeuvre"></text>
+		<text id="label" lang="en" alt="Another work"></text>
+	</slide>
+</slides>

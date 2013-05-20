@@ -1,0 +1,30 @@
+@font-face {
+	font-family: 'ssl';
+	src:url('../../fonts/ssl.eot');
+	src:url('../../fonts/ssl.eot?#iefix') format('embedded-opentype'),
+		url('../../fonts/ssl.woff') format('woff'),
+		url('../../fonts/ssl.ttf') format('truetype'),
+		url('../../fonts/ssl.svg#ssl') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+.icon-circle-blank, .icon-circle, .icon-mail {
+	font-family: 'ssl';
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+	-webkit-font-smoothing: antialiased;
+}
+.icon-circle-blank:before {
+	content: "\e000";
+}
+.icon-circle:before {
+	content: "\e001";
+}
+.icon-mail:before {
+	content: "\e002";
+}
