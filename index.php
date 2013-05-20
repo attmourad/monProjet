@@ -3,8 +3,8 @@
 	include_once('includes/header.inc.php'); 
 ?>
 <div class="main_home">
-	<p>Dodification -1-</p>
-		
+	<p>parag -1-</p>
+	<p>Parag -2-</p>	
 	<?php
 		/*
 		include_once('lib/slideshow.cls.php');
